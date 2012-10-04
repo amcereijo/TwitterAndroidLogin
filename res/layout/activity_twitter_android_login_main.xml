@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    
+    <ImageButton android:src="@drawable/twitter_bird_light_bgs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:id="@+id/twitter_icon"
+        android:contentDescription="@string/twitter_icon_descr"
+        android:clickable="true" 
+        android:onClick="twitterLogin"/>
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/twitter_icon"
+        android:text="@string/twitter_login_text"
+        tools:context=".TwitterAndroidLoginMainActivity"
+        android:clickable="true" 
+        android:onClick="twitterLogin"
+        android:id="@+id/twitter_login_text"/>
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_below="@id/twitter_login_text"
+        tools:context=".TwitterAndroidLoginMainActivity"
+        android:visibility="gone"
+        android:id="@+id/login_result"/>
+    
+    <ImageView android:id="@+id/login_picture_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_below="@id/login_result"
+        android:visibility="gone"
+        android:contentDescription="@string/login_picture_profile_desc"
+        />
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_below="@id/login_picture_profile"
+        tools:context=".TwitterAndroidLoginMainActivity"
+        android:visibility="gone"
+        android:id="@+id/login_result_username"/>
+    
+    
+    
+
+    
+</RelativeLayout>

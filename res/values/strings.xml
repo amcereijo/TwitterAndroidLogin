@@ -1,0 +1,18 @@
+<resources>
+
+    <string name="app_name">TwitterAndroidLogin</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_twitter_android_login_main">TwitterAndroidLoginMainActivity</string>
+	
+    <string name="twitter_icon_descr">Twitter icon</string>
+    <string name="twitter_login_text">Log in Twitter</string>
+    
+    <string name="loged_text">Logged in Twitter as</string>
+    <string name="not_loged_text">Logged failed</string>
+    <string name="cancel_loged_text">Logged canceled</string>
+    
+    <string name="login_picture_profile_desc">Picture profile</string>
+    <string name="login_result_username_text">Name:</string>
+    
+    
+</resources>

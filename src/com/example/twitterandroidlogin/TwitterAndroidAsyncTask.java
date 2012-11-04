@@ -106,7 +106,10 @@ public class TwitterAndroidAsyncTask extends
 		String authURL;
 		if(!isLoadTokenAccessAndSecret()){
 			authURL = provider.retrieveRequestToken(consumer, CALLBACK_URL);
-			c.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(authURL)));
+			Intent webIntent = new Intent(c, TwitterWebView.class);
+			webIntent.putExtra(TwitterWebView.KEY_URL_TO_LOAD, authURL);
+			c.startActivityForResult(webIntent,TwitterWebView.WEBVIEW_RETURN_CODE);
+			
 		}else{
 			getAndShowUserInfo();
 		}

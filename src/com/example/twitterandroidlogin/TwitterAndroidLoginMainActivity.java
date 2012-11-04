@@ -3,6 +3,7 @@ package com.example.twitterandroidlogin;
 import oauth.signpost.commonshttp.CommonsHttpOAuthConsumer;
 import oauth.signpost.commonshttp.CommonsHttpOAuthProvider;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
@@ -53,14 +54,13 @@ public class TwitterAndroidLoginMainActivity extends Activity {
     
     
     @Override
-    protected void onResume() {
-    	super.onResume();
-    	new TwitterAndroidAsyncTask(this, consumer, provider)
-    		.execute(TwitterAndroidAsyncTask.GRANT_ACCESS);
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+    	if(resultCode == TwitterWebView.WEBVIEW_RETURN_CODE){
+    		getIntent().setData(data.getData());
+    		new TwitterAndroidAsyncTask(this, consumer, provider)
+    			.execute(TwitterAndroidAsyncTask.GRANT_ACCESS);
+    	}
     }
-    
-    
-    
 
 	
 }

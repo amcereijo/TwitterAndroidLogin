@@ -22,18 +22,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
             <!-- Used for OAuth callback -->
-      <intent-filter>
-        <action
-          android:name="android.intent.action.VIEW" />
-        <category
-          android:name="android.intent.category.DEFAULT" />
-        <category
-          android:name="android.intent.category.BROWSABLE" />
-        <data
-          android:scheme="x-goodout-oauth-twitter"
-          android:host="callback" />
-      </intent-filter>
+	      <intent-filter>
+	        <action
+	          android:name="android.intent.action.VIEW" />
+	        <category
+	          android:name="android.intent.category.DEFAULT" />
+	        <category
+	          android:name="android.intent.category.BROWSABLE" />
+	        <data
+	          android:scheme="x-goodout-oauth-twitter"
+	          android:host="callback" />
+	      </intent-filter>
         </activity>
+        <activity android:name=".TwitterWebView" ></activity>
     </application>
 
 </manifest>
